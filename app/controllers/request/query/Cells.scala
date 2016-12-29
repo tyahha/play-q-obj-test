@@ -5,7 +5,7 @@ import play.api.mvc.QueryStringBindable
 case class Cells(columns: Int, rows: Int)
 
 object Cells {
-  implicit def queryStringLocalDateBinder(implicit intBinder: QueryStringBindable[Int]) = new QueryStringBindable[Cells] {
+  implicit def queryStringBinder(implicit intBinder: QueryStringBindable[Int]) = new QueryStringBindable[Cells] {
     val columnsKey = "columns"
     val rowsKey = "rows"
 
