@@ -1,0 +1,14 @@
+@import controllers.request.query.Cells
+
+@(cells: Cells)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Query String Test</title>
+    </head>
+    <body>
+    @for(_ <- 1 to cells.rows) {@{List.fill(cells.columns)("■").mkString}<br>
+    }
+    </body>
+</html>
